@@ -2,4 +2,4 @@ target/
 project/target/
 project/project/
 __pycache__/
-*/secrets.py
+secrets.py
