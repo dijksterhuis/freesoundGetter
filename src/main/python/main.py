@@ -273,8 +273,6 @@ class Arguments:
             b=max(args.duration_range)
         ) if args.duration_range else ""
         
-        
-        
         self.text = args.text_query if args.text_query else None
         self.filters = filters if filters != "" else None
         self.fields = ",".join(args.fields)
