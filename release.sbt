@@ -21,21 +21,6 @@ lazy val pushDocker = ReleaseStep(action = st => {
   st
 })
 
-releaseProcessDocker := Seq[ReleaseStep](
-  checkSnapshotDependencies,                    // : ReleaseStep
-  inquireVersions,                              // : ReleaseStep
-  runClean,                                     // : ReleaseStep
-  runTest,                                      // : ReleaseStep
-  setReleaseVersion,                            // : ReleaseStep
-  commitReleaseVersion,                         // : ReleaseStep, performs the initial git checks
-  tagRelease,                                   // : ReleaseStep
-  buildDocker,                                  // : ReleaseStep, build the docker images
-  pushDocker,                                   // : ReleaseStep, push the docker image
-  setNextVersion,                               // : ReleaseStep
-  commitNextVersion,                            // : ReleaseStep
-  pushChanges                                   // : ReleaseStep, also checks that an upstream branch is properly configured
-)
-
 releaseProcess := Seq[ReleaseStep](
   checkSnapshotDependencies,                    // : ReleaseStep
   inquireVersions,                              // : ReleaseStep
@@ -44,8 +29,8 @@ releaseProcess := Seq[ReleaseStep](
   setReleaseVersion,                            // : ReleaseStep
   commitReleaseVersion,                         // : ReleaseStep, performs the initial git checks
   tagRelease,                                   // : ReleaseStep
-  buildDocker,                                  // : ReleaseStep, build the docker images
-  pushDocker,                                   // : ReleaseStep, push the docker image
+  //buildDocker,                                  // : ReleaseStep, build the docker images
+  //pushDocker,                                   // : ReleaseStep, push the docker image
   setNextVersion,                               // : ReleaseStep
   commitNextVersion,                            // : ReleaseStep
   pushChanges                                   // : ReleaseStep, also checks that an upstream branch is properly configured
