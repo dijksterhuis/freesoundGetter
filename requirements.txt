@@ -1,3 +1,4 @@
 toml
 requests
 git+git://github.com/MTG/freesound-python@master#egg=freesound
+inquirer
