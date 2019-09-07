@@ -9,7 +9,7 @@ import os
 import datetime
 import string
 
-from secrets import CLIENT_ID, CLIENT_SECRET
+from .secrets import CLIENT_ID, CLIENT_SECRET
 
 class OAuth:
     def __init__(self, client_id, client_secret):
